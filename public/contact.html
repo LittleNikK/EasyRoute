@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — EasyRoute Trips</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">EasyRoute <span>Trips</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="tours.html">Tours</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn">Contact</a>
+      </nav>
+      <button id="navToggle" class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container contact-page">
+    <section>
+      <h1>Get in touch</h1>
+      <p>Tell us travel dates, pickup location, budget and number of travellers. We’ll reply with options and a quick quote.</p>
+
+      <form id="contactForm" class="contact-form" method="post" action="/api/contact">
+        <label>
+          Full name
+          <input type="text" name="name" required placeholder="Your name">
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" required placeholder="you@example.com">
+        </label>
+
+        <label>
+          Phone (WhatsApp preferred)
+          <input type="tel" name="phone" placeholder="+91 9xxxxxxxxx">
+        </label>
+
+        <label>
+          Trip details
+          <textarea name="message" rows="5" placeholder="Dates, pickup (Pune), number of people, budget, any special requests..." required></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Send enquiry</button>
+          <button type="button" id="resetBtn" class="btn btn-outline">Reset</button>
+        </div>
+
+        <div id="formMessage" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <aside class="contact-info">
+      <h2>Contact details</h2>
+      <p><strong>Phone:</strong> +91 9325315810</p>
+      <p><strong>Email:</strong> <a href="mailto:easyroutetrips@gmail.com">easyroutetrips@gmail.com</a></p>
+      <p><strong>Address:</strong> Pune, Maharashtra</p>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>EasyRoute Trips</strong>
+        <p>Pune — +91 9325315810 — <a href="mailto:easyroutetrips@gmail.com">easyroutetrips@gmail.com</a></p>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="tours.html">Tours</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="copyright">© <span id="year4"></span> EasyRoute Trips — All rights reserved.</div>
+  </footer>
+</body>
+</html>
